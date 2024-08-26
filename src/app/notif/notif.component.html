@@ -1,0 +1,25 @@
+<app-side></app-side>
+
+
+<div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden mt-10">
+    <div class="px-6 py-4 border-b border-gray-200">
+      <h2 class="text-2xl font-semibold text-gray-800">Notifications</h2>
+    </div>
+    <ul class="divide-y divide-gray-200">
+      <li *ngFor="let notification of notifications" class="px-6 py-4 hover:bg-gray-50">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/>
+            </svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-medium text-gray-900 truncate">{{ notification.title }}</p>
+            <p class="text-sm text-gray-500 truncate">{{ notification.description }}</p>
+          </div>
+          <div class="text-sm text-gray-500">{{ notification.time }}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
